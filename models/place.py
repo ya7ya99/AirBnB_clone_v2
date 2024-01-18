@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Place Module for HBNB project """
+""" The HBNB project Place Module"""
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Integer
 from sqlalchemy import Float, ForeignKey, Table
@@ -57,7 +57,7 @@ class Place(BaseModel, Base):
 
         @property
         def reviews(self):
-            """Returns the list of Review instances with place_id
+            """The Review instances with place_id list returned
             equals to the current Place.id"""
             from models import storage
 
@@ -70,7 +70,7 @@ class Place(BaseModel, Base):
 
         @property
         def amenities(self):
-            """Returns the list of Amenity instances based on amenity_ids."""
+            """The list of Amenity instances based on amenity_ids"""
             return self.amenity_ids
 
         @amenities.setter
